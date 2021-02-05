@@ -52,6 +52,7 @@ document.getElementById("volume-number").addEventListener("change", function(eve
 });
 
 function updateImage(volnum) {
+    document.getElementById("horn-sound").volume = volnum/100;
     let volimg = document.getElementById("volume-image");
     if (volnum == 0) {
         volimg.src = "./assets/media/icons/volume-level-0.svg";
