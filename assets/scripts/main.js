@@ -53,17 +53,21 @@ document.getElementById("volume-number").addEventListener("change", function(eve
 
 function updateImage(volnum) {
     let volimg = document.getElementById("volume-image");
-    if (volnum = 0) {
+    if (volnum == 0) {
         volimg.src = "./assets/media/icons/volume-level-0.svg";
+        volimg.alt = "Mute";
         btn.disabled = true;
     } else if (volnum > 0 && volnum < 34) {
         volimg.src = "./assets/media/icons/volume-level-1.svg";
+        volimg.alt = "Low Volume";
         btn.disabled = false;
     } else if (volnum > 33 && volnum < 67) {
         volimg.src = "./assets/media/icons/volume-level-2.svg";
+        volimg.alt = "Medium Volume";
         btn.disabled = false;
     } else {
-        volimg.src = "./assets/media/icons/volume-level-4.svg";
+        volimg.src = "./assets/media/icons/volume-level-3.svg";
+        volimg.alt = "Max Volume";
         btn.disabled = false;
     }
 }
