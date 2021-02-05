@@ -32,8 +32,11 @@ function radioChange() {
     })
 }
 
-document.getElementById("party-horn-form").addEventListener("submit", function(event){
-    event.preventDefault();
+document.getElementById("party-horn-form").addEventListener("keydown", function(event) {
+    var key = event.key;
+    if (key == 13) {
+        event.preventDefault();
+    }
 });
 
 document.getElementById("volume-slider").addEventListener("change", function(event) {
@@ -51,16 +54,16 @@ document.getElementById("volume-number").addEventListener("change", function(eve
 function updateImage(volnum) {
     let volimg = document.getElementById("volume-image");
     if (volnum = 0) {
-        volimg.src = "./assets/media/icons/volume-level-0.svg"
+        volimg.src = "./assets/media/icons/volume-level-0.svg";
         btn.disabled = true;
     } else if (volnum > 0 && volnum < 34) {
-        volimg.src = "./assets/media/icons/volume-level-1.svg"
+        volimg.src = "./assets/media/icons/volume-level-1.svg";
         btn.disabled = false;
     } else if (volnum > 33 && volnum < 67) {
-        volimg.src = "./assets/media/icons/volume-level-2.svg"
+        volimg.src = "./assets/media/icons/volume-level-2.svg";
         btn.disabled = false;
     } else {
-        volimg.src = "./assets/media/icons/volume-level-4.svg"
+        volimg.src = "./assets/media/icons/volume-level-4.svg";
         btn.disabled = false;
     }
 }
