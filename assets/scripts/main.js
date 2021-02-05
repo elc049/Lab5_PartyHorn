@@ -5,9 +5,11 @@ btn.addEventListener("click", function(event){
     document.getElementById("horn-sound").play();
 });
 
-var radios = document.getElementsByName("radio-sound");
-radios.onclick=function() {
+document.getElementsByName("radio-sound").forEach((rad) => {rad.addEventListener("click", radioChange)});
+
+function radioChange() {
     let pict = document.getElementById("sound-image");
+    let radios = document.getElementsByName("radio-sound");
     for (radio of radios) {
         if (radio.checked) {
             if (radio.id == "radio-air-horn") {
