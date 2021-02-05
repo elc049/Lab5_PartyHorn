@@ -11,10 +11,7 @@ function radioChange() {
     let pict = document.getElementById("sound-image");
     let radios = document.getElementsByName("radio-sound");
     radios.forEach(radio => {
-        alert("hi");
-        //if (radio.checked) {
-            //alert(radio.id);
-            /*
+        if (radio.checked) {
             if (radio.id == "radio-air-horn") {
                 pict.src = "./assets/media/images/air-horn.svg";
                 pict.alt = "Air Horn";
@@ -29,8 +26,8 @@ function radioChange() {
                 pict.src = "./assets/media/images/party-horn.svg";
                 pict.alt = "Party Horn";
                 alert("test");
-            }*/
-        //}
+            }
+        }
     })
 }
 // TODO
