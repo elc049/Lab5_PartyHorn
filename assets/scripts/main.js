@@ -8,7 +8,7 @@ btn.addEventListener("click", function(event){
 document.getElementsByName("radio-sound").forEach((rad) => {rad.addEventListener("click", radioChange)});
 
 function radioChange() {
-    let pict = document.getElementById("sound-image");
+    /*let pict = document.getElementById("sound-image");
     let radios = document.getElementsByName("radio-sound");
     for (radio of radios) {
         if (radio.checked) {
@@ -25,6 +25,7 @@ function radioChange() {
                 pict.alt = "Party Horn";
             }
         }
-    }
+    } */
+    alert("test");
 }
 // TODO
