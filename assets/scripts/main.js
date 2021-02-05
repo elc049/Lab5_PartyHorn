@@ -1,7 +1,7 @@
 // main.js
 var btn = document.getElementById("honk-btn");
 btn.addEventListener("click", function(event){
-    event.preventDefault()
+    event.preventDefault();
     document.getElementById("horn-sound").play();
 });
 
@@ -30,5 +30,38 @@ function radioChange() {
             }
         }
     })
+}
+
+document.getElementById("party-horn-form").addEventListener("submit", function(event){
+    event.preventDefault();
+});
+
+document.getElementById("volume-slider").addEventListener("change", function(event) {
+    let volnum = document.getElementById("volume-slider").value;
+    document.getElementById("volume-number").value = volnum;
+    updateImage(volnum);
+});
+
+document.getElementById("volume-number").addEventListener("change", function(event) {
+    let volnum = document.getElementById("volume-number").value;
+    document.getElementById("volume-slider").value = volnum;
+    updateImage(volnum);
+});
+
+function updateImage(volnum) {
+    let volimg = document.getElementById("volume-image");
+    if (volnum = 0) {
+        volimg.src = "./assets/media/icons/volume-level-0.svg"
+        btn.disabled = true;
+    } else if (volnum > 0 && volnum < 34) {
+        volimg.src = "./assets/media/icons/volume-level-1.svg"
+        btn.disabled = false;
+    } else if (volnum > 33 && volnum < 67) {
+        volimg.src = "./assets/media/icons/volume-level-2.svg"
+        btn.disabled = false;
+    } else {
+        volimg.src = "./assets/media/icons/volume-level-4.svg"
+        btn.disabled = false;
+    }
 }
 // TODO
