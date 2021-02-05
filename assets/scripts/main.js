@@ -9,23 +9,24 @@ document.getElementsByName("radio-sound").forEach((rad) => {rad.addEventListener
 
 function radioChange() {
     let pict = document.getElementById("sound-image");
+    let aud = document.getElementById("horn-sound");
     let radios = document.getElementsByName("radio-sound");
     radios.forEach(radio => {
         if (radio.checked) {
             if (radio.id == "radio-air-horn") {
                 pict.src = "./assets/media/images/air-horn.svg";
                 pict.alt = "Air Horn";
-                alert("air");
+                aud.src= "./assets/media/audio/air-horn.mp3";
             }
             else if (radio.id == "radio-car-horn") {
-                pict.src = "./assets/media/images/car-horn.svg";
+                pict.src = "./assets/media/images/car.svg";
                 pict.alt = "Car Horn";
-                alert("car");
+                aud.src= "./assets/media/audio/car-horn.mp3";
             }
             else {
                 pict.src = "./assets/media/images/party-horn.svg";
                 pict.alt = "Party Horn";
-                alert("test");
+                aud.src= "./assets/media/audio/party-horn.mp3";
             }
         }
     })
