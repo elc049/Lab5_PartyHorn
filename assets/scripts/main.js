@@ -8,24 +8,26 @@ btn.addEventListener("click", function(event){
 document.getElementsByName("radio-sound").forEach((rad) => {rad.addEventListener("click", radioChange)});
 
 function radioChange() {
-    /*let pict = document.getElementById("sound-image");
+    let pict = document.getElementById("sound-image");
     let radios = document.getElementsByName("radio-sound");
     for (radio of radios) {
         if (radio.checked) {
             if (radio.id == "radio-air-horn") {
                 pict.src = "./assets/media/images/air-horn.svg";
                 pict.alt = "Air Horn";
+                alert("air");
             }
             else if (radio.id == "radio-car-horn") {
                 pict.src = "./assets/media/images/car-horn.svg";
                 pict.alt = "Car Horn";
+                alert("car");
             }
             else {
                 pict.src = "./assets/media/images/party-horn.svg";
                 pict.alt = "Party Horn";
+                alert("test");
             }
         }
-    } */
-    alert("test");
+    } 
 }
 // TODO
